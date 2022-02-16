@@ -1,0 +1,13 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin outline {
+  outline: 2px solid $main-color;
+}
+
+@mixin outline-none {
+  outline: 2px solid transparent;
+}
