@@ -1,6 +1,91 @@
-@import '/src/app/shared/styles/variables';
-
+@import "/src/app/shared/styles/style";
 footer {
-  height: 95px;
-  background-color: #e5e5;
+  border-top: 5px solid $main-color;
+}
+.footer {
+  max-width: 1920px;
+  height: $footer-height;
+  margin: 0 auto;
+  padding: 0 35px;
+  &-top {
+    padding: 20px 0;
+    @include flex-space-between;
+  }
+  &__logo {
+    max-width: 135px;
+    display: block;
+    width: 100%;
+  }
+  &__menu {
+    display: flex;
+    .menu-item {
+      &:nth-child(2) {
+        margin: 0 50px;
+      }
+    }
+  }
+  &__info {
+    width: 45%;
+    text-align: center;
+    line-height: 1.25em;
+    @include flex-space-between;
+    align-items: flex-start;
+    .info {
+      font-size: $font-size;
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-bottom {
+    padding: 0 0 20px 0;
+    @include flex-space-between;
+  }
+  &__copyright {
+    font-size: 12px;
+    color: $gray-color;
+    p {
+      margin-right: 40px;
+    }
+  }
+  &__payments {
+    @include flex-space-between;
+    .payment {
+      width: 69px;
+      height: 39px;
+      border: 1px solid #dcdcdc;
+      border-radius: 5px;
+      @include flex-center;
+      &:nth-child(2) {
+        margin: 0 5px;
+      }
+    }
+  }
+  &__social {
+    @include flex-space-between;
+    span {
+      margin-right: 20px;
+      font-size: $font-size;
+    }
+    ul {
+      @include flex-space-between;
+      a {
+        width: 49px;
+        height: 49px;
+        margin: 0 3px;
+        background-color: $main-color;
+        border: 2px solid $main-color;
+        border-radius: 10px;
+        @include flex-center;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  a:hover {
+    color: $main-color;
+  }
 }

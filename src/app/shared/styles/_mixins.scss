@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+@mixin flex-space-between {
+  @include flex-center;
+  justify-content: space-between;
+}
+
 @mixin outline {
   outline: 2px solid $main-color;
 }

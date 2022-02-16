@@ -1,5 +1,6 @@
 @import "/src/app/shared/styles/style.scss";
 
 main {
-padding-top: $header-height;
+  padding-top: $header-height;
+  min-height: calc(100vh - ($header-height + $footer-height + 5px));
 }

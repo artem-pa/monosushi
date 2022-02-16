@@ -1,13 +1,18 @@
 @import "/src/app/shared/styles/style.scss";
 
+header {
+  position: fixed;
+  width: 100%;
+}
 .header {
+  max-width: 1920px;
+  margin: 0 auto;
   &-row {
-    width: 100%;
     height: $header-height;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
   }
 
   &__logo > a {
@@ -48,7 +53,7 @@
           span {
             margin-top: 5px;
             font-weight: bold;
-            font-size: $header-font-size;
+            font-size: $font-size;
           }
         }
       }
@@ -112,7 +117,7 @@
         @include flex-center;
         flex-direction: column;
         &__time {
-          font-size: $header-font-size;
+          font-size: $font-size;
         }
         span {
           font-weight: bold;
