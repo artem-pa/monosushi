@@ -3,6 +3,7 @@
 header {
   position: fixed;
   width: 100%;
+  z-index: 50;
 }
 .header {
   max-width: 1920px;
@@ -23,67 +24,65 @@ header {
     @include flex-center;
   }
 
-  &__nav {
-    .nav {
-      width: calc(100vw / 3.8);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      &__item {
-        width: 60px;
-        height: 60px;
-        border-radius: 10px;
-        @include outline-none;
-        transition: all 0.5s;
-        @include flex-center;
-        &:hover {
-          @include outline;
+  &__nav .nav {
+    width: calc(100vw / 3.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__item {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      @include outline-none;
+      transition: all 0.5s;
+      @include flex-center;
+      &:hover:not(.burger-active) {
+        @include outline;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $black-color;
+        text-decoration: none;
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
         }
-        a {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          color: $black-color;
-          text-decoration: none;
-          img {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
-          }
-          span {
-            margin-top: 5px;
-            font-weight: bold;
-            font-size: $font-size;
-          }
+        span {
+          margin-top: 5px;
+          font-weight: bold;
+          font-size: $font-size;
         }
       }
-      &__burger {
-        width: 45px;
-        height: 45px;
-        margin-left: calc(100vw / 95);
-        .burger {
-          cursor: pointer;
-          &__bar {
-            width: 30px;
-            height: 4px;
-            border-radius: 2px;
-            background-color: $black-color;
-            margin: 6px 0;
-            transition: all 0.5s;
-          }
+    }
+    &__burger {
+      width: 45px;
+      height: 45px;
+      margin-left: calc(100vw / 95);
+      .burger {
+        cursor: pointer;
+        &__bar {
+          width: 30px;
+          height: 4px;
+          border-radius: 2px;
+          background-color: $black-color;
+          margin: 6px 0;
+          transition: all 0.5s;
         }
-        &:hover {
-          .burger__bar {
-            &:nth-child(1) {
-              transform: rotate(-45deg) translate(-6px, 6px);
-            }
-            &:nth-child(2) {
-              opacity: 0;
-            }
-            &:nth-child(3) {
-              transform: rotate(45deg) translate(-8px, -8px);
-            }
-          }
+      }
+    }
+    .burger-active {
+      .burger__bar {
+        &:nth-child(1) {
+          transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(45deg) translate(-8px, -8px);
         }
       }
     }
@@ -116,6 +115,7 @@ header {
       .info {
         @include flex-center;
         flex-direction: column;
+        text-align: center;
         &__time {
           font-size: $font-size;
         }
@@ -152,6 +152,56 @@ header {
     }
     span {
       font-weight: bold;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  &__menu {
+    width: max-content;
+    height: 10px;
+    top: 20px;
+    padding: 20px 25px;
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.7s;
+    @include outline;
+    li {
+      margin: 10px 0;
+      line-height: 2.5em;
+      border-radius: 7px;
+      font-weight: bold;
+      padding: 0 10px;
+      @include outline-none;
+      &:hover {
+        @include outline;
+      }
+    }
+  }
+}
+.burger-active .burger__menu {
+  height: 200px;
+  top: 40px;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1280px) {
+  .header .header__contacts {
+    width: 20vw;
+    .call-back {
+      margin-right: 20px;
+      span {
+        margin: 0;
+        &.text {
+          display: none;
+        }
+      }
     }
   }
 }

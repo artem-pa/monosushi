@@ -2,47 +2,59 @@
   <div class="header">
     <div class="header-row">
       <div class="header__logo">
-        <a href="">
+        <a [routerLink]="['/']">
           <img src="./assets/header/main_logo.svg" alt="">
         </a>
       </div>
       <nav class="header__nav">
         <ul class="nav">
           <li class="nav__item">
-            <a href="/">
+            <a [routerLink]="[ '/promotions' ]">
               <img src="./assets/header/nav_promo.svg" alt="">
               <span>Акції</span>
             </a>
           </li>
           <li class="nav__item">
-            <a href="/">
+            <a [routerLink]="[ '/product-categories/sushi' ]">
               <img src="./assets/header/nav_sushi.svg" alt="">
               <span>Роли</span>
             </a>
           </li>
           <li class="nav__item">
-            <a href="/">
+            <a [routerLink]="[ '/product-categories/sets' ]">
               <img src="./assets/header/nav_sets.svg" alt="">
               <span>Сети</span>
             </a>
           </li>
           <li class="nav__item">
-            <a href="/">
+            <a [routerLink]="[ '/product-categories/drinks' ]">
               <img src="./assets/header/nav_drinks.svg" alt="">
               <span>Напої</span>
             </a>
           </li>
           <li class="nav__item">
-            <a href="/">
+            <a [routerLink]="[ '/product-categories/sauces' ]">
               <img src="./assets/header/nav_sauces.svg" alt="">
               <span>Соуси</span>
             </a>
           </li>
-          <li class="nav__item nav__burger">
-            <div class="burger">
+          <li class="nav__item nav__burger" [ngClass]="{'burger-active': burgerStatus}">
+            <div class="burger"  (click)="changeBurger()">
               <div class="burger__bar"></div>
               <div class="burger__bar"></div>
               <div class="burger__bar"></div>
+
+              <ul class="burger__menu">
+                <li class="burger__item">
+                  <a [routerLink]="[ '/delivery-payment' ]">Доставка та оплата</a>
+                </li>
+                <li class="burger__item">
+                  <a [routerLink]="[ '/about-us' ]">Про нас</a>
+                </li>
+                <li class="burger__item">
+                  <a [routerLink]="[ '/promotions' ]">Акції</a>
+                </li>
+              </ul>
             </div>
           </li>
         </ul>
@@ -52,7 +64,7 @@
           <span>
             <img src="./assets/header/phone.svg" alt="">
           </span>
-          ми зателефонуємо
+          <span class="text">ми зателефонуємо</span>
         </button>
         <div class="call-info">
           <div class="info">
@@ -69,7 +81,7 @@
       </div>
       <div class="header__login">
         <div class="login-icon">
-          <a href="">
+          <a [routerLink]="[ '/admin' ]">
             <img src="./assets/header/user.svg" alt="">
           </a>
         </div>

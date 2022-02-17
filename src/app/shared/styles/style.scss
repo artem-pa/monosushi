@@ -2,3 +2,22 @@
 @import './variables';
 @import './mixins';
 
+h1.category-title {
+  width: max-content;
+  font-size: 42px;
+  font-weight: bold;
+  margin: 40px auto;
+  padding-top: 10px;
+  text-align: center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: $main-color;
+  }
+}
