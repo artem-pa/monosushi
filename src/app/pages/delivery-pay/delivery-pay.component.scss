@@ -1,0 +1,102 @@
+@import "/src/app/shared/styles/style.scss";
+
+.container {
+  width: 100%;
+  max-width: 1700px;
+  padding: 20px 15px;
+  margin: 0 auto;
+  .block {
+    width: 80%;
+    margin: 40px auto 0;
+    color: $black-color;
+    @include flex-space-between;
+    &-item .row {
+      width: 100%;
+      padding: 0 10px;
+      text-align: center;
+      @include flex-space-between;
+      .img {
+        width: 35%;
+        img {
+          width: 100%;
+        }
+      }
+      h4 {
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 1.3em;
+        letter-spacing: 0.07em;
+        margin-bottom: 10px;
+      }
+      p {
+        color: $gray-color;
+        span{
+          font-weight: bold;
+        }
+      }
+    }
+    &__green {
+      h4, p span {
+        color: $green;
+      }
+    }
+    &__yellow {
+      h4, p span {
+        color: $yellow;
+      }
+    }
+  }
+  .map {
+    width: 80%;
+    margin: 40px auto 0;
+    color: $black-color;
+    img {
+      width: 100%;
+    }
+  }
+  .payment {
+    width: 75%;
+    margin: 40px auto 0;
+    color: $black-color;
+    .row {
+      margin-top: 20px;
+      @include flex-space-between;
+      &__item {
+        width: 47%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        .pay-img {
+          width: 50px;
+          height: 45px;
+          padding: 0 10px;
+          border-radius: 10px;
+          background: $main-color;
+          @include flex-center;
+          img {
+            width: 100%;
+          }
+        }
+        .pay-text {
+          padding: 10px;
+          line-height: 1.6em;
+          color: $gray-color;
+          h4 {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.1em;
+            margin-bottom: 15px;
+            color: $black-color;
+          }
+        }
+      }
+    }
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.4em;
+    text-align: center;
+  }
+}

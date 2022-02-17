@@ -2,5 +2,5 @@
 
 main {
   padding-top: $header-height;
-  min-height: calc(100vh - ($header-height + $footer-height + 5px));
+  min-height: calc(100vh - ($footer-height + 5px));
 }
