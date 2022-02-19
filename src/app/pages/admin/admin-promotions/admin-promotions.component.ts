@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { deleteObject, getDownloadURL, percentage, Storage } from '@angular/fire/storage';
 import { IPromoResponse } from 'src/app/shared/interfaces/promo.interface';
 import { PromoService } from 'src/app/shared/services/promo/promo.service';
-import { ref, uploadBytesResumable } from 'firebase/storage';
+import { ref, uploadBytesResumable } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-admin-promotions',
