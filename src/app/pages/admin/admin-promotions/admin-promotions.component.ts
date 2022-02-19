@@ -36,7 +36,7 @@ export class AdminPromotionsComponent implements OnInit {
       name: [null, Validators.required],
       title: [null, Validators.required],
       description: [null, Validators.required],
-      imagePath: ['/assets/pages/promotions/roll-of-week.png']
+      imagePath: [null]
     })
   }
 

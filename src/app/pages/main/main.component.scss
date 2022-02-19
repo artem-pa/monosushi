@@ -1,7 +1,6 @@
 @import '/src/app/shared/styles/style.scss';
 
 .banner {
-  background-image: url('/assets/pages/main/banner-img-1-1920x650.jpg');
   min-height: 650px;
   @include flex-center;
   .container {
@@ -51,7 +50,6 @@
   height: 180px;
   padding: 40px 0;
   background-color: $main-color;
-  background-image: url('/assets/pages/main/bg-monosushi-logo.svg');
   .row {
     @include flex-space-between;
     height: 100%;
