@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '838722139304',
   },
   production: true,
-  BACKEND_URL: 'http://localhost:3000'
+  BACKEND_URL: 'https://my-json-server.typicode.com/Artem-Parashchenko/monosushi/'
 };
