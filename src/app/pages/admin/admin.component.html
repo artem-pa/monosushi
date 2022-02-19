@@ -1,1 +1,14 @@
-<p>admin works!</p>
+<div class="space-90"></div>
+<div class="container">
+  <ul class="list left-side">
+    <li class="list__item" [routerLink]="[ 'promotions' ]" routerLinkActive="active">Акції</li>
+    <li class="list__item" [routerLink]="[ 'categories' ]" routerLinkActive="active">Категорії</li>
+    <li class="list__item" [routerLink]="[ 'products' ]" routerLinkActive="active">Товари</li>
+    <li class="list__item" [routerLink]="[ 'orders' ]" routerLinkActive="active">Замовлення</li>
+  </ul>
+
+  <div class="right-side">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,14 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { ProductCategoriesComponent } from './pages/product-categories/product-categories.component';
 import { OfertaComponent } from './pages/oferta/oferta.component';
 
+import { AdminPromotionsComponent } from './pages/admin/admin-promotions/admin-promotions.component';
+import { AdminCategoriesComponent } from './pages/admin/admin-categories/admin-categories.component';
+import { AdminProductsComponent } from './pages/admin/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './pages/admin/admin-orders/admin-orders.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,13 +34,22 @@ import { OfertaComponent } from './pages/oferta/oferta.component';
     PromotionsComponent,
     DeliveryPayComponent,
     AboutUsComponent,
-    AdminComponent,
     ProductCategoriesComponent,
-    OfertaComponent
+    OfertaComponent,
+    AdminComponent,
+    AdminPromotionsComponent,
+    AdminCategoriesComponent,
+    AdminProductsComponent,
+    AdminOrdersComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]
