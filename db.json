@@ -13,6 +13,13 @@
       "description": " - Замовляйте 4 роли та отримуйте ще 1 безкоштовно.\n - Замовляйте 8 та отримуйте ще 2 безкоштовно і так далі.",
       "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fpromotions%2Fevery-5th-free.png?alt=media&token=a81745be-076e-4010-9958-7b4a5a70dc2d",
       "id": 2
+    },
+    {
+      "name": "самовивіз",
+      "title": "Самовивіз",
+      "description": "Забирайте своє замовлення самостійно та отримуйте такі переваги:\n\nЗапечені моно макі з лососем у подарунок.\nВідсутність мінімальної суми замовлення.\nЧас очікування на замовлення до 30 хв.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fpromotions%2F3.-samovyviz-01-scaled-697x379.jpg?alt=media&token=54bf6952-3d34-453e-87ad-81ce2805142a",
+      "id": 3
     }
   ],
   "categories": [
@@ -29,10 +36,56 @@
       "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_sets.svg?alt=media&token=f291a5e0-e2d0-4df4-83cd-a5c818a57711"
     },
     {
-      "name": "соуси",
-      "path": "sauces",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_sauces.svg?alt=media&token=4af9c650-0389-44de-9aa6-2b713e75ee3d",
+      "name": "напої",
+      "path": "drinks",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_drinks.svg?alt=media&token=e86dc2b3-89e8-4c18-8cd6-2667ddb7c199",
       "id": 3
+    }
+  ],
+  "products": [
+    {
+      "category": "роли",
+      "name": "Макі з тунцем -50%",
+      "path": "maki-z-tunczem-50",
+      "ingredients": "Рис, норі, тунець",
+      "weight": "120 г",
+      "price": "62",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fproducts%2F5.-maki-z-tunczem.jpg?alt=media&token=e31f55e3-8131-4bb6-af13-b59266456ec2",
+      "id": 2,
+      "count": 1
+    },
+    {
+      "category": "роли",
+      "name": "Філадельфія з лососем",
+      "path": "filadelfiya-z-lososem",
+      "ingredients": "Риc, крем сир, огірок, лосось",
+      "weight": "280 г",
+      "price": "174",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fproducts%2F1.-filadelfiya-z-lososem.jpg?alt=media&token=472434c7-e866-46a2-bbbe-43d0540d619a",
+      "id": 3,
+      "count": 1
+    },
+    {
+      "category": "напої",
+      "name": "Coca-Cola",
+      "path": "coca-cola",
+      "ingredients": null,
+      "weight": "0.5 л",
+      "price": "24",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fproducts%2Fcoca_cola.png?alt=media&token=d27520e9-ec56-4806-8d85-c4f49498c505",
+      "id": 4,
+      "count": 1
+    },
+    {
+      "category": "напої",
+      "name": "Fanta Апельсин",
+      "path": "fanta-lymon",
+      "ingredients": null,
+      "weight": "0.5 л",
+      "price": "24",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fproducts%2Ffanta.png?alt=media&token=3e4a3ef0-c8ac-4ba2-9a03-a7a969519d87",
+      "id": 5,
+      "count": 1
     }
   ]
 }

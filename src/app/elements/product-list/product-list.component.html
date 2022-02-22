@@ -1,0 +1,25 @@
+<ul class="products row">
+  <li class="product" *ngFor="let product of products">
+    <div class="product__img">
+      <img [src]="product.imagePath">
+    </div>
+    <p class="product__name">{{ product.name }}</p>
+    <div class="product__info">
+      <p class="product__ingredients">{{ product?.ingredients }}</p>
+      <p class="product__weight">{{ product.weight }}</p>
+    </div>
+    <div class="product__buy">
+      <p class="product__price">
+        {{ product.price * product.count }}
+        <span> грн</span>
+      </p>
+      <div class="product__count count">
+        <button (click)="reduceCount(product)">-</button>
+        <span>{{ product.count }}</span>
+        <button (click)="increaseCount(product)">+</button>
+      </div>
+      <button class="product__btn">замовити</button>
+    </div>
+  </li>
+</ul>
+<div class="space-60"></div>

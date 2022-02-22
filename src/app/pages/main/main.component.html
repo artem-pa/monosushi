@@ -38,3 +38,24 @@
     </div>
   </div>
 </div>
+
+<div class="space-90"></div>
+<div class="container-products">
+  <table class="types">
+    <tr>
+      <td [routerLink]="[ '/product-list/1' ]" routerLinkActive="active">Всі</td>
+      <td [routerLink]="[ '/product-list/2' ]" routerLinkActive="active">Філадельфія</td>
+      <td [routerLink]="[ '/product-list/3' ]" routerLinkActive="active">Каліфорнія</td>
+      <td [routerLink]="[ '/product-list/4' ]" routerLinkActive="active">Запечені</td>
+      <td [routerLink]="[ '/product-list/5' ]" routerLinkActive="active">Фірмові</td>
+      <td [routerLink]="[ '/product-list/6' ]" routerLinkActive="active">Макі</td>
+      <td [routerLink]="[ '/product-list/7' ]" routerLinkActive="active">Преміум</td>
+    </tr>
+  </table>
+  <div class="space-60"></div>
+
+<!-- <router-outlet></router-outlet> -->
+
+<app-product-list></app-product-list>
+
+</div>

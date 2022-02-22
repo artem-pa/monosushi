@@ -24,6 +24,7 @@ import { AdminCategoriesComponent } from './pages/admin/admin-categories/admin-c
 import { AdminProductsComponent } from './pages/admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './pages/admin/admin-orders/admin-orders.component';
 import { environment } from '../environments/environment';
+import { ProductListComponent } from './elements/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { environment } from '../environments/environment';
     AdminCategoriesComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,

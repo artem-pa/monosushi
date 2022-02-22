@@ -1,1 +1,15 @@
 <h1 class="category-title">Акції</h1>
+<div class="space-90"></div>
+
+<div class="container-promo">
+  <div class="row">
+    <div class="promo" *ngFor="let promo of promotions">
+      <div class="promo__img">
+        <img [src]="promo.imagePath" alt="">
+      </div>
+      <p class="promo__title">{{ promo.title }}</p>
+      <div class="promo__line"></div>
+      <button class="promo__btn">дізнатися більше</button>
+    </div>
+  </div>
+</div>

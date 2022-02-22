@@ -1,1 +1,20 @@
 <h1 class="category-title">Продукти</h1>
+
+<div class="space-90"></div>
+<div class="container-products">
+  <table class="types">
+    <tr>
+      <td [routerLink]="[ '1' ]" routerLinkActive="active">Всі</td>
+      <td [routerLink]="[ '2' ]" routerLinkActive="active">Філадельфія</td>
+      <td [routerLink]="[ '3' ]" routerLinkActive="active">Каліфорнія</td>
+      <td [routerLink]="[ '4' ]" routerLinkActive="active">Запечені</td>
+      <td [routerLink]="[ '5' ]" routerLinkActive="active">Фірмові</td>
+      <td [routerLink]="[ '6' ]" routerLinkActive="active">Макі</td>
+      <td [routerLink]="[ '7' ]" routerLinkActive="active">Преміум</td>
+    </tr>
+  </table>
+  <div class="space-60"></div>
+
+  <router-outlet></router-outlet>
+  
+  <!-- <app-product-list></app-product-list> -->

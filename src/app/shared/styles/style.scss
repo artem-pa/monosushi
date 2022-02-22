@@ -1,6 +1,6 @@
-@import './reset';
-@import './variables';
-@import './mixins';
+@import "./reset";
+@import "./variables";
+@import "./mixins";
 
 h1.category-title {
   width: max-content;
@@ -11,7 +11,7 @@ h1.category-title {
   text-align: center;
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -19,6 +19,32 @@ h1.category-title {
     height: 5px;
     border-radius: 10px;
     background-color: $main-color;
+  }
+}
+
+.container-products {
+  width: 85%;
+  max-width: 1800px;
+  margin: 0 auto;
+  table.types {
+    margin: 0 auto;
+    td {
+      min-width: 160px;
+      height: 60px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1.1em;
+      font-weight: bold;
+      padding: 15px;
+      border: 1px solid $light-gray;
+      border-collapse: collapse;
+      cursor: pointer;
+
+      &.active {
+        border: none;
+        border-top: 3px solid $main-color;
+      }
+    }
   }
 }
 

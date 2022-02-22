@@ -7,6 +7,7 @@ import { DeliveryPayComponent } from './pages/delivery-pay/delivery-pay.componen
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ProductCategoriesComponent } from './pages/product-categories/product-categories.component';
 import { OfertaComponent } from './pages/oferta/oferta.component';
+import { ProductListComponent } from './elements/product-list/product-list.component';
 
 import { AdminComponent } from './pages/admin/admin.component';
 import { AdminPromotionsComponent } from './pages/admin/admin-promotions/admin-promotions.component';
@@ -15,11 +16,16 @@ import { AdminProductsComponent } from './pages/admin/admin-products/admin-produ
 import { AdminOrdersComponent } from './pages/admin/admin-orders/admin-orders.component';
 
 const routes: Routes = [
-  {path: '', component: MainComponent},
+  {path: '', component: MainComponent, children: [
+    {path: 'product-list/:type', component: ProductListComponent}
+  ]},
   {path: 'promotions', component: PromotionsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'delivery-payment', component: DeliveryPayComponent},
-  {path: 'product-categories/:category', component: ProductCategoriesComponent},
+  {path: 'product-categories/:category', component: ProductCategoriesComponent, children: [
+    {path: '', redirectTo: '1', pathMatch: 'full'},
+    {path: ':type', component: ProductListComponent},
+  ]},
   {path: 'oferta', component: OfertaComponent},
   {path: 'admin', component: AdminComponent, children: [
     {path: 'promotions', component: AdminPromotionsComponent},
@@ -27,7 +33,6 @@ const routes: Routes = [
     {path: 'products', component: AdminProductsComponent},
     {path: 'orders', component: AdminOrdersComponent}
   ]},
-  
 ];
 
 @NgModule({

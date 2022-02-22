@@ -71,7 +71,7 @@
         text-transform: uppercase;
         font-weight: bold;
         &:hover {
-          background-color: transparent;
+          background-color: $main-color;
         }
       }
       p {
@@ -84,3 +84,5 @@
     }
   }
 }
+
+

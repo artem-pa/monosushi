@@ -1,0 +1,106 @@
+@import "/src/app/shared/styles/style.scss";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+
+  .product {
+    width: calc(100% / 4.5);
+    min-width: 250px;
+    min-height: 470px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.7s;
+    cursor: pointer;
+    outline: 3px solid transparent;
+    &__img {
+      height: 300px;
+      padding: 10px;
+      @include flex-center;
+      overflow: hidden;
+      img {
+        width: 100%;
+        top: 0;
+        transition: 0.5s;
+        position: relative;
+      }
+    }
+
+    &__name {
+      font-size: 1.3em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      min-height: 2.2em;
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+    }
+    &__ingredients {
+      line-height: 1.2em;
+      color: $gray-color;
+    }
+    &__weight {
+      line-height: 1.2em;
+      font-weight: bold;
+      color: $gray-color;
+      text-align: end;
+    }
+
+    &__buy {
+      @include flex-space-between;
+    }
+    &__price {
+      min-width: 75px;
+      font-size: 1.15em;
+      font-weight: bold;
+      span {
+        font-size: $font-size;
+        font-weight: normal;
+      }
+    }
+    &__count.count {
+      border: 1px solid $gray-color;
+      border-radius: 5px;
+      padding: 3px;
+      line-height: 1.5em;
+      span {
+        font-size: 0.8em;
+        margin: 0 5px;
+      }
+      button {
+        width: 12px;
+        padding: 2px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: transparent;
+        &:hover {
+          background-color: $main-color;
+        }
+      }
+    }
+    &__btn {
+      padding: 10px;
+      border: 2px solid $main-color;
+      border-radius: 7px;
+      background-color: $main-color;
+      font-weight: bold;
+      text-transform: uppercase;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      outline: 3px solid $main-color;
+      & .product__img img {
+        top: 10px;
+      }
+    }
+  }
+}

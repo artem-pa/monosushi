@@ -1,3 +1,76 @@
 <div class="btn-box">
-  <button class="btn btn-add">додати товар</button>
+  <button class="btn btn-add" (click)="addProduct()">додати товар</button>
 </div>
+
+<table *ngIf="!formStatus"> 
+  <thead>
+    <tr>
+      <th class="first">#</th>
+      <th>Категорія</th>
+      <th>Назва</th>
+      <th>Інгридієнти</th>
+      <th>Вага</th>
+      <th>Ціна</th>
+      <th class="img">Картинка</th>
+      <th class="actions">Дії</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of products; index as i">
+      <td class="first">{{ i+1 }}</td>
+      <td>{{ item.category }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.ingredients }}</td>
+      <td>{{ item.weight }}</td>
+      <td>{{ item.price }}</td>
+      <td class="img">
+        <img [src]="item.imagePath" alt="">
+      </td>
+      <td class="actions">
+        <a (click)="editProduct(item)">Редагувати</a>
+        <a (click)="deleteProduct(item)">Видалити</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<form *ngIf="formStatus" [formGroup]="productForm" (ngSubmit)="saveCategory()">
+  <div class="input-box">
+    <!-- <select name="category"> -->
+    <select name="category" formControlName="category" [value]="defaultSelect">
+      <option [ngValue]="defaultSelect" disabled><p>*Категорія</p></option>
+      <option *ngFor="let item of categories" [ngValue]="item.name" >{{ item.name }}</option>
+    </select>
+  </div>
+
+  <div class="input-box" style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px;">
+    <input type="text" formControlName="name" placeholder="*Назва">
+    <input type="text" formControlName="path" placeholder="*Шлях">
+  </div>
+
+  <div class="input-box">
+    <input type="text" formControlName="ingredients" placeholder="*Інгредієнти">
+  </div>
+
+  <div class="input-box" style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px;">
+    <input type="text" formControlName="weight" placeholder="*Вага">
+    <input type="text" formControlName="price" placeholder="*Ціна">
+  </div>
+
+  <div class="input-box">
+    <input type="file" (change)="upload($event)">
+    <div class="progress" *ngIf="!uploadedStatus">
+      <div class="progress__fill" [style.right.%]="100 - uploadPercent.percent"></div>
+      <p class="progress__text">{{ uploadPercent.percent }}%</p>
+    </div>
+    <div class="delete-img" *ngIf="uploadedStatus">
+      <button type="button" class="btn btn-img" (click)="deleteImg()">видалити</button>
+      <img [src]="valueByControl('imagePath')" alt="">
+    </div>
+  </div>
+  
+  <button type="submit" class="btn" [disabled]="productForm.invalid">
+    {{editStatus ? 'збергти' : 'додати'}}
+  </button>
+
+</form>

@@ -86,7 +86,7 @@ table {
     width: 150px;
     text-align: center;
     img {
-      width: 130px;
+      max-width: 130px;
       height: 70px;
     }
   }
@@ -114,7 +114,7 @@ form {
   width: 70%;
   .input-box {
     margin-bottom: 20px;
-    input, textarea {
+    input, textarea, select {
       width: 100%;
       font-size: 1.2em;
       padding: 10px 15px;
@@ -125,6 +125,15 @@ form {
       &:focus {
         border-color: transparent;
         outline: 3px solid $main-color;
+      }
+    }
+    select {
+      cursor: pointer;
+      option {
+        padding: 5px;
+        p {
+          color: $gray-color;
+        }
       }
     }
     .progress {
