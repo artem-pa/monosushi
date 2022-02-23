@@ -18,9 +18,9 @@
   <tbody>
     <tr *ngFor="let item of products; index as i">
       <td class="first">{{ i+1 }}</td>
-      <td>{{ item.category }}</td>
+      <td>{{ item.category.name }}</td>
       <td>{{ item.name }}</td>
-      <td>{{ item.ingredients }}</td>
+      <td>{{ item.ingredients ? item.ingredients : '———' }}</td>
       <td>{{ item.weight }}</td>
       <td>{{ item.price }}</td>
       <td class="img">
@@ -36,10 +36,9 @@
 
 <form *ngIf="formStatus" [formGroup]="productForm" (ngSubmit)="saveCategory()">
   <div class="input-box">
-    <!-- <select name="category"> -->
     <select name="category" formControlName="category" [value]="defaultSelect">
       <option [ngValue]="defaultSelect" disabled><p>*Категорія</p></option>
-      <option *ngFor="let item of categories" [ngValue]="item.name" >{{ item.name }}</option>
+      <option *ngFor="let item of categories" [ngValue]="item" >{{ item.name }}</option>
     </select>
   </div>
 

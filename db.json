@@ -26,7 +26,7 @@
     {
       "id": 1,
       "name": "роли",
-      "path": "rolls",
+      "path": "sushi",
       "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_sushi.svg?alt=media&token=77e60fca-7a25-479a-a58e-a81b5fe0f319"
     },
     {
@@ -40,11 +40,22 @@
       "path": "drinks",
       "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_drinks.svg?alt=media&token=e86dc2b3-89e8-4c18-8cd6-2667ddb7c199",
       "id": 3
+    },
+    {
+      "name": "соуси",
+      "path": "sauces",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_sauces.svg?alt=media&token=1f755c5e-eaea-444c-89ab-790a5c0c8971",
+      "id": 4
     }
   ],
   "products": [
     {
-      "category": "роли",
+      "category": {
+        "id": 1,
+        "name": "роли",
+        "path": "sushi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_sushi.svg?alt=media&token=77e60fca-7a25-479a-a58e-a81b5fe0f319"
+      },
       "name": "Макі з тунцем -50%",
       "path": "maki-z-tunczem-50",
       "ingredients": "Рис, норі, тунець",
@@ -55,7 +66,12 @@
       "count": 1
     },
     {
-      "category": "роли",
+      "category": {
+        "id": 1,
+        "name": "роли",
+        "path": "sushi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_sushi.svg?alt=media&token=77e60fca-7a25-479a-a58e-a81b5fe0f319"
+      },
       "name": "Філадельфія з лососем",
       "path": "filadelfiya-z-lososem",
       "ingredients": "Риc, крем сир, огірок, лосось",
@@ -66,7 +82,12 @@
       "count": 1
     },
     {
-      "category": "напої",
+      "category": {
+        "name": "напої",
+        "path": "drinks",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_drinks.svg?alt=media&token=e86dc2b3-89e8-4c18-8cd6-2667ddb7c199",
+        "id": 3
+      },
       "name": "Coca-Cola",
       "path": "coca-cola",
       "ingredients": null,
@@ -77,15 +98,36 @@
       "count": 1
     },
     {
-      "category": "напої",
+      "category": {
+        "name": "напої",
+        "path": "drinks",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_drinks.svg?alt=media&token=e86dc2b3-89e8-4c18-8cd6-2667ddb7c199",
+        "id": 3
+      },
       "name": "Fanta Апельсин",
       "path": "fanta-lymon",
       "ingredients": null,
       "weight": "0.5 л",
       "price": "24",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fproducts%2Ffanta.png?alt=media&token=3e4a3ef0-c8ac-4ba2-9a03-a7a969519d87",
-      "id": 5,
-      "count": 1
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fproducts%2Ffanta.png?alt=media&token=de474cc1-de22-42f4-8107-6af1df1dfc9d",
+      "count": 1,
+      "id": 5
+    },
+    {
+      "category": {
+        "name": "соуси",
+        "path": "sauces",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fcategories%2Fnav_sauces.svg?alt=media&token=1f755c5e-eaea-444c-89ab-790a5c0c8971",
+        "id": 4
+      },
+      "name": "Васабі",
+      "path": "vasabi",
+      "ingredients": null,
+      "weight": "25 г",
+      "price": "9",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/quiet-branch-339514.appspot.com/o/images%2Fproducts%2F4444.png?alt=media&token=34060fd3-e0df-449b-b189-f662f2e28fa7",
+      "count": 1,
+      "id": 6
     }
   ]
 }
